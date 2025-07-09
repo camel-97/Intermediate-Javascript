@@ -17,24 +17,20 @@
             <input type="text" id="length-input">
             <label for="read-input"></label>
             <input type="text" id="read-input">
-            <button type="submit" id="submit-btn"></button>
-            <button type="reset" id="reset-btn"></button>
+            <button type="submit" id="submit-btn">Submit</button>
+            <button type="reset" id="reset-btn">Reset</button>
         </form>
-    <div class="library-grid">
-        <template id="book-template">
-            <div class="book-card">
-                <div class="title"></div>
-                <div class="author"></div>
-                <div class="length"></div>
-                <div class="read"></div>
-                <button class="remove">Delete Book</button>
-                <button class="toggle-read">Toggle Read</button>
-            </div>
-        </template>
     </div>
-
-
-    </div>
+    <div id="library-grid"></div>
+    <template id="book-template">
+        <div class="book-card">
+        <div class="title"></div>
+        <div class="author"></div>
+        <div class="length"></div>
+        <div class="read"></div>
+        <button class="remove">Delete Book</button>
+        <button class="toggle-read">Toggle Read</button>
+    </template>
     <script src="objects.js"></script>
 </body>
 </html>
