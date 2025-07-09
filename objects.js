@@ -31,12 +31,36 @@ function addBookToLibrary(title, author, length, read) {
 }
 
 //Event listener to submit button, calling add book function
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", (e) => {
+    e.preventDefault(); // Critical!
     addBookToLibrary(
         title.value,
         author.value,
         length.value,
         read.value);
-        console.log(myLibrary)
+        
+        displayLibrary();
 });
 
+//function to clear library, rebuild upon run appending children using the template
+function displayLibrary() {
+    const libraryGrid = document.getElementById("library-grid");
+    const template = document.getElementById("book-template");
+
+    libraryGrid.innerHTML = ""; //clear grid to rebuild with latest array
+
+// clone each book into the template within html and populate with each parameter value respectively
+    myLibrary.forEach(book => {
+        const clone = template.content.cloneNode(true);
+
+        clone.querySelector(".title").textContent = book.title;
+        clone.querySelector(".author").textContent = book.author;
+        clone.querySelector(".length").textContent = book.length;
+        clone.querySelector(".read").textContent = book.read;
+
+        const card = clone.querySelector(".book-card");
+        card.dataset.id = book.id;
+
+        libraryGrid.appendChild(clone);
+    });
+}
