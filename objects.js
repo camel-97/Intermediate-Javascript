@@ -11,9 +11,6 @@ function Book(title, author, length, read){
     this.author = author;
     this.length = length;
     this.read = read;
-    this.getInfo = function(){
-        return (title + " by " + author + ", is " + length + ". " + read + ".");
-    }
 }
 
 const submitBtn = document.getElementById("submit-btn");
