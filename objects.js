@@ -58,6 +58,27 @@ function displayLibrary() {
         const card = clone.querySelector(".book-card");
         card.dataset.id = book.id;
 
+        const toggleBtn = clone.querySelector(".toggle-read");
+        toggleBtn.addEventListener("click", () => {
+            if (book.read === "You've read this!") {
+                book.read = "Not read yet";
+            }
+            else {
+                book.read = "You've read this!";
+            }
+            displayLibrary();
+        })
+
+        const deleteBtn = clone.querySelector(".remove");
+        deleteBtn.addEventListener("click", () => {
+            const index = myLibrary.findIndex(item => item.id === book.id);
+            if (index !== -1) {
+                myLibrary.splice(index, 1);
+                displayLibrary();
+            }
+        })
+        
         libraryGrid.appendChild(clone);
+        
     });
 }
