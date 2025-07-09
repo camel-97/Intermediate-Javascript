@@ -9,14 +9,18 @@
 <body>
     <div class="addBookCard">
         <form id="book-form">
-            <label for="title-input"></label>
+            <label for="title-input">Title:</label>
             <input type="text" id="title-input" >
-            <label for="author-input"></label>
+            <label for="author-input">Author:</label>
             <input type="text" id="author-input">
-            <label for="length-input"></label>
+            <label for="length-input">No. of Pages:</label>
             <input type="text" id="length-input">
-            <label for="read-input"></label>
-            <input type="text" id="read-input">
+            <legend>Have you read it?</legend>
+            <label for="yes">Yes!</label>
+            <input type="radio" id="yes" name="read-status" value="You've read this!">
+            <label for="no">Not Yet</label>
+            <input type="radio" id="no" name="read-status" value="Not read yet">
+
             <button type="submit" id="submit-btn">Submit</button>
             <button type="reset" id="reset-btn">Reset</button>
         </form>

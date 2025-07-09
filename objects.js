@@ -30,10 +30,9 @@ submitBtn.addEventListener("click", (e) => {
     const title = document.getElementById("title-input").value;
     const author = document.getElementById("author-input").value;
     const length = document.getElementById("length-input").value;
-    const read = document.getElementById("read-input").value;
+    const read = document.querySelector('input[name="read-status"]:checked').value;
     
-    addBookToLibrary(
-        title, author, length, read);
+    addBookToLibrary(title, author, length, read);
     
     // run function, clear form
     displayLibrary();
