@@ -16,13 +16,8 @@ function Book(title, author, length, read){
     }
 }
 
-//Setting form elements to constants
-const title = document.getElementById("title-input");
-const author = document.getElementById("author-input");
-const length = document.getElementById("length-input");
-const read = document.getElementById("read-input");
 const submitBtn = document.getElementById("submit-btn");
-const resetBtn = document.getElementById("reset-btn")
+const resetBtn = document.getElementById("reset-btn");
 
 //Add book to library function that calls book creation function
 function addBookToLibrary(title, author, length, read) {
@@ -33,13 +28,19 @@ function addBookToLibrary(title, author, length, read) {
 //Event listener to submit button, calling add book function
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault(); // Critical!
+
+    //Setting form elements to constants
+    const title = document.getElementById("title-input").value;
+    const author = document.getElementById("author-input").value;
+    const length = document.getElementById("length-input").value;
+    const read = document.getElementById("read-input").value;
+    
     addBookToLibrary(
-        title.value,
-        author.value,
-        length.value,
-        read.value);
-        
-        displayLibrary();
+        title, author, length, read);
+    
+    // run function, clear form
+    displayLibrary();
+    document.getElementById("book-form").reset();
 });
 
 //function to clear library, rebuild upon run appending children using the template
