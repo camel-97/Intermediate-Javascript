@@ -1,0 +1,24 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    border: solid;
+}
+
+.addBookCard {
+    width: 50vw;
+}
+#book-form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+input {
+    width: 100px;
+}
+
+input[type="radio"] {
+    width: 20px;
+}
+
