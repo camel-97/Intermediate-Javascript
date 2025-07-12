@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Library</title> 
     <link rel="stylesheet" href="objects.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>  
     <div class="addBookCard">
         <form id="book-form">
+            <legend class="form-header">Add a Book</legend>
             <label for="title-input">Title:</label>
-            <input type="text" id="title-input" >
+            <input type="text" id="title-input" placeholder="" >
             <label for="author-input">Author:</label>
-            <input type="text" id="author-input">
+            <input type="text" id="author-input" placeholder="">
             <label for="length-input">No. of Pages:</label>
-            <input type="text" id="length-input">
+            <input type="text" id="length-input" placeholder="">
             <legend>Have you read it?</legend>
-            <div>
+            <div class="radio-options">
                 <label for="yes">Yes!</label>
                 <input type="radio" id="yes" name="read-status" value="You've read this!">
                 <label for="no">Not Yet</label>
                 <input type="radio" id="no" name="read-status" value="Not read yet">
             </div>
-            <div>
+            <div class="buttons">
                 <button type="submit" id="submit-btn">Submit</button>
                 <button type="reset" id="reset-btn">Reset</button>
             </div> 
