@@ -32,16 +32,32 @@
             </div> 
         </form>
     </div>
-    <div id="library-grid"></div>
-    <template id="book-template">
-        <div class="book-card">
-        <div class="title"></div>
-        <div class="author"></div>
-        <div class="length"></div>
-        <div class="read"></div>
-        <button class="remove">Delete Book</button>
-        <button class="toggle-read">Toggle Read</button>
-    </template>
+    <main class="main">
+        <div class="nav-bar">
+            <div class="nav-left">
+                <img src="magnify copy.svg" alt="search magnifying glass icon">
+                <input type="search" id="search-bar" name="q" autocomplete="on" placeholder="Search...">
+                <button>Search</button>
+            </div>
+            <div class="nav-right">
+                <div class="user-icon">
+                    <img src="vaporwave-png-43647 copy.png" alt="User Icon">
+                </div>
+                <div class="user-name">@cameron_mcm</div>
+                <button>log out</button>
+            </div>
+        </div>
+        <div id="library-grid"></div>
+        <template id="book-template">
+            <div class="book-card">
+            <div class="title"></div>
+            <div class="author"></div>
+            <div class="length"></div>
+            <div class="read"></div>
+            <button class="remove">Delete Book</button>
+            <button class="toggle-read">Toggle Read</button>
+        </template>
+    </main>
     <script src="objects.js"></script>
 </body>
 </html>
